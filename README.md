@@ -16,6 +16,10 @@ The header file [`rtrace.h`](./manifest/rtrace.h) was generated using `mc.exe` u
 
 `libtrace.dll` is written in Visual Studio 2015. The ETW provider registration/deregistration is done during dll load/unload events. Pre-built binaries are already provided in the `bin` folder.
 
+### Build the test binary
+
+A `main.rs` is provided alongside `lib.rs` for testing. To build, just run `cargo build` in the root folder. This should generate a `rusttrace.exe` binary in `target/debug` folder.
+
 ### Real-time event capture
 
 For real-time log capture, I usually use [`mftrace.exe`](https://msdn.microsoft.com/en-us/library/windows/desktop/ff685370(v=vs.85).aspx). You can find this tool from the Windows SDK bin folder (usually in `C:\Program Files (x86)\Windows Kits\10\bin\x86`). Note that this tool needs `mfdetours.dll` as well, in case you copy it to a different location. To start capture, run the following command in either command prompt or Powershell in administrator mode:
@@ -27,6 +31,19 @@ mftrace.exe -c config.xml
 *** [`config.xml`](./manifest/config.xml) is also provided.
 
 ![mftrace](./assets/mftrace.png)
+
+### Using [PerfView](https://github.com/Microsoft/perfview)
+
+For analysis, I use both PerfView and Windows Performance Analyzer tools. To capture using PerfView:
+
+1. Run `PerfView.exe`.
+2. Go to `Collect` menu and select `Collect` (or Alt+C).
+3. Expand `Advanced Options` and click `Provider Browser`, search for `RustTrace` under `Provider Filter`, make sure `Verbose` level is selected, and click `Add Provider`.
+4. Click `Start Collection`.
+5. Run `rusttrace.exe` binary.
+6. Click `Stop Collection` in PerfView. This will generate, by default, a zip file called `PerfViewData.etl.zip` in the same directory as `PerfView.exe` binary.
+
+![perfview](./assets/perfview.png)
 
 # License
 
