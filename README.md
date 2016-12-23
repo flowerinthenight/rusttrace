@@ -26,6 +26,8 @@ mftrace.exe -c config.xml
 
 *** [`config.xml`](./manifest/config.xml) is also provided.
 
+![mftrace](./assets/mftrace.png)
+
 # License
 
 [The MIT License](./LICENSE.md)
