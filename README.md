@@ -9,12 +9,12 @@ This library provides bindings to ETW event call APIs generated from the [ETW ma
 A simple [manifest file](./manifest/rtrace.man) is provided. For more information on how to create the manifest file, check out this [link](https://msdn.microsoft.com/en-us/library/windows/desktop/dd996930(v=vs.85).aspx). To install the manifest file, run the following command in administrator mode:
 
 ```
-wevtutil im rtrace.man /rf:"full_path_to_libtrace.dll" /mf:"full_path_to_libtrace.dll"
+wevtutil im rtrace.man /rf:"<full_path_to_libtrace.dll>" /mf:"<full_path_to_libtrace.dll>"
 ```
 
 The header file [`rtrace.h`](./manifest/rtrace.h) was generated using `mc.exe` using the command `mc.exe -um rtrace.man`. This header file is then used in `libtrace.dll`.
 
-`libtrace.dll` is written in Visual Studio 2015. The ETW provider registration/deregistration is done during dll load/unload events.
+`libtrace.dll` is written in Visual Studio 2015. The ETW provider registration/deregistration is done during dll load/unload events. Pre-built binaries are already provided in the `bin` folder.
 
 # License
 
