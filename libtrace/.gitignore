@@ -1,0 +1,6 @@
+*.db
+.vs/
+ipch/
+[Dd]ebug/
+[Rr]elease/
+x64/

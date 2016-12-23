@@ -1,0 +1,5 @@
+LIBRARY libtrace
+EXPORTS
+    __rt_trace @1
+    __rt_init @2
+    __rt_cleanup @3
