@@ -18,7 +18,7 @@ The header file [`rtrace.h`](./manifest/rtrace.h) was generated using `mc.exe` u
 
 ### Build the test binary
 
-A `main.rs` is provided alongside `lib.rs` for testing. To build, just run `cargo build` in the root folder. This should generate a `rusttrace.exe` binary in `target/debug` folder.
+A `main.rs` is provided alongside `lib.rs` for testing. To build, just run `cargo build` in the root folder. This should generate a `rusttrace.exe` binary in `target/debug` folder. Do not forget to copy `libtrace.dll` to the binary location.
 
 ### Real-time event capture
 
