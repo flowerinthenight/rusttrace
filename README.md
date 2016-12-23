@@ -16,6 +16,16 @@ The header file [`rtrace.h`](./manifest/rtrace.h) was generated using `mc.exe` u
 
 `libtrace.dll` is written in Visual Studio 2015. The ETW provider registration/deregistration is done during dll load/unload events. Pre-built binaries are already provided in the `bin` folder.
 
+### Real-time event capture
+
+For real-time log capture, I usually use [`mftrace.exe`](https://msdn.microsoft.com/en-us/library/windows/desktop/ff685370(v=vs.85).aspx). You can find this tool from the Windows SDK bin folder (usually in `C:\Program Files (x86)\Windows Kits\10\bin\x86`). Note that this tool needs `mfdetours.dll` as well, in case you copy it to a different location. To start capture, run the following command in either command prompt or Powershell in administrator mode:
+
+```
+mftrace.exe -c config.xml
+```
+
+*** [`config.xml`](./manifest/config.xml) is also provided.
+
 # License
 
 [The MIT License](./LICENSE.md)
