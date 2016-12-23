@@ -2,12 +2,7 @@
 name = "rusttrace"
 version = "0.1.0"
 authors = ["Chew Esmero <chew.esmero@gmail.com>"]
-links = "libtrace"
+links = "trace"
 build = "build.rs"
-
-[target.x86_64-pc-windows-msvc.libtrace]
-rustc-link-lib = ["libtrace"]
-rustc-link-search = ["E:/Development/github/rusttrace/bin/"]
-root = "E:/Development/github/rusttrace/bin/"
 
 [dependencies]
