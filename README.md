@@ -14,6 +14,8 @@ wevtutil im rtrace.man /rf:"full_path_to_libtrace.dll" /mf:"full_path_to_libtrac
 
 The header file [`rtrace.h`](./manifest/rtrace.h) was generated using `mc.exe` using the command `mc.exe -um rtrace.man`. This header file is then used in `libtrace.dll`.
 
+`libtrace.dll` is written in Visual Studio 2015. The ETW provider registration/deregistration is done during dll load/unload events.
+
 # License
 
 [The MIT License](./LICENSE.md)
