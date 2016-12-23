@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<providers>
+    <!-- Rust tracing via ETW -->
+    <provider level="5" ID="0330D9D7-32E3-4988-AAFF-DE3FE47DDFD2">
+        <keyword ID="0xF"/>
+    </provider> 
+</providers>
