@@ -45,6 +45,12 @@ For analysis, I use both PerfView and Windows Performance Analyzer tools. To cap
 
 ![perfview](./assets/perfview.png)
 
+### Analysis using [Windows Performance Analyzer](https://msdn.microsoft.com/en-us/library/windows/hardware/hh448170.aspx)
+
+When you unzip the file generated from PerfView, there is a file called `PerfViewData.etl` that you can open using Windows Performance Analyzer.
+
+![wpa](./assets/wpa.png)
+
 # License
 
 [The MIT License](./LICENSE.md)
