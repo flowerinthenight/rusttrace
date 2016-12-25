@@ -51,6 +51,14 @@ When you unzip the file generated from PerfView, there is a file called `PerfVie
 
 ![wpa](./assets/wpa.png)
 
+# FAQ
+
+### I don't need the provider anymore. How do I uninstall it?
+
+```
+wevtutil um rtrace.man
+```
+
 # License
 
 [The MIT License](./LICENSE.md)
